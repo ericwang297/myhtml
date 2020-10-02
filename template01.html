@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		
+		/* set whole a animaltion */
+		
+		body{
+			font-family: Arial;
+		}
+		
+		
+		p{
+			display: block;
+			-webkit-margin-before: 0em;
+			-webkit-margin-after: 0em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+		 }
+		
+		#root_area{
+			min-width: 1200px;
+			position: relative;
+			display: flow-root;
+			width: 100%;
+			margin:0px auto;
+			background-color:#222222;
+		}
+		
+			#top_area{
+				position: relative;
+				width: 90%;
+				height: 355px;
+				display: flow-root;
+				margin:0px auto;
+				padding-bottom: 0px;
+				text-align:center;
+				background-color:#FFFFFF;
+				z-index: 3;
+				box-shadow: 0px 0px 10px 3px #646464;
+				-webkit-box-shadow: 0px 0px 10px 3px #646464;
+				-moz-box-shadow: 0px 0px 10px 3px #646464;
+				
+			}
+			
+				.top_img{
+					width: 100%;
+					
+				}
+			
+			#middle_area{
+				position: relative;
+				float: top;
+				display: flow-root;
+				width: 90%;
+				margin:0px auto;
+				background-color:#ffffff;
+				box-shadow: 0px 0px 10px 3px #999999;
+				-webkit-box-shadow: 0px 0px 10px 3px #999999;
+				-moz-box-shadow: 0px 0px 10px 3px #999999;
+				z-index: 0;
+			}
+			
+				#middle_left_area{
+					position: relative;
+					float: left;
+					width: 20%;
+					text-align:center;
+					background-color:#ffffff;
+					z-index: 1;
+				}
+				
+					#middle_left_block{
+					position: relative;
+					width: 100%;
+					margin:0px auto;
+					padding: 5%;
+					border: 1px solid;
+					border-color: #ffffff;
+					-webkit-border-radius: 10px;
+					text-align:left;
+					word-wrap:break-word;
+					word-break:break-all;
+					background-color:#ffffff;
+					}
+					
+					#middle_left_block li:hover{
+						background-color: #e79e15;
+						padding-bottom:10px;
+						padding-top: 10px;
+						padding-left: 18px;
+						margin-left: -18px;
+						color: #ffffff;
+						font-size: 18px;
+					}
+					
+					#middle_left_block li:active{
+						background-color: #000000;
+						padding-bottom:10px;
+						padding-top: 10px;
+						padding-left: 18px;
+						margin-left: -18px;
+						color: #ffffff;
+						font-size: 18px;
+					}
+					
+					#middle_left_block li {
+						list-style: none;
+						padding-bottom: 10px;
+						padding-top: 10px;
+						font-family: Arial;
+						font-size: 18px;
+						color: #e79e15;
+						
+					}
+					
+					#middle_left_block a{
+						text-decoration: none;
+					}
+				
+				#middle_center_area{
+					position: relative;
+					float: left;
+					width: 60%;
+					text-align:center;
+					background-color:#fdfdda;
+					box-shadow: 0px 0px 10px 3px #646464;
+					-webkit-box-shadow: 0px 0px 10px 3px #646464;
+					-moz-box-shadow: 0px 0px 10px 3px #646464;
+					z-index: 2;
+				}
+				
+					#middle_center_block{
+					position: relative;
+					width: 90%;
+					margin:0px auto;
+					text-align:left;
+					word-wrap:break-word;
+					word-break:break-all;
+					background-color:#fdfdda;
+					}
+				
+				#middle_right_area{
+					position: relative;
+					display: flow-root;
+					float: right;
+					width: 20%;
+					text-align:center;
+					background-color:#FFFFFF;
+					z-index: 1;
+				}
+					
+					#middle_right_block{
+						position: relative;
+						display: flow-root;
+						width: 90%;
+						margin:0px auto;
+						text-align:left;
+						word-wrap:break-word;
+						word-break:break-all;
+						background-color:#FFFFFF;
+					}
+					
+						.middle_right_box{
+							position: relative;
+							display: flow-root;
+							width: 90%;
+							margin:0 auto;
+							margin-bottom: 10%;
+							padding-left:5%;
+							padding-right:5%;
+							border: 1px solid;
+							border-color: #DDDDDD;
+							-webkit-border-radius: 10px;
+							text-align:center;
+							word-wrap:break-word;
+							word-break:break-all;
+							background-color:#DDDDDD;
+						}
+						
+							.middle_right_img{
+								width: 98%;
+								border: 1px solid;
+								border-color: #DDDDDD;
+								-webkit-border-radius: 5px;
+								background-color:#DDDDDD;
+							}
+			
+			#bottom_area{
+				position: relative;
+				display: flow-root;
+				width: 90%;
+				margin:0px auto;
+				text-align:center;
+				background-color:#FFFFFF;
+				box-shadow: 0px 0px 10px 3px #646464;
+				-webkit-box-shadow: 0px 0px 10px 3px #646464;
+				-moz-box-shadow: 0px 0px 10px 3px #646464;
+			}
+			
+				#bottom_block{
+					position: relative;
+					display: flow-root;
+					width: 80%;
+					margin:0px auto;
+					text-align:center;
+					word-wrap:break-word;
+					word-break:break-all;
+					background-color:#FFFFFF;
+				}
+				
+					.bottom_h3{
+						display:inline-block;
+						width:60%;
+						font-size:1em;
+						letter-spacing:0.7em;
+						color:#666;
+						border-bottom:1px #999 dashed;
+						padding-bottom:2px
+					}
+					
+					.bottom_box{
+						position: relative;
+						display: flow-root;
+						float: left;
+						width: 18%;
+						margin:0% auto;
+						padding:1%;
+						text-align:center;
+						word-wrap:break-word;
+						word-break:break-all;
+						background-color:#FFFFFF;
+					}
+					
+					.bottom_img{
+						width: 98%;
+						border: 1px solid;
+						border-color: #DDDDDD;
+						-webkit-border-radius: 5px;
+						background-color:#DDDDDD;
+					}
+			#footer{
+				position: relative;
+				display: flow-root;
+				width: 90%;
+				height: 100px;
+				margin:0px auto;
+				margin-top: 0px;
+				text-align:center;
+				background: linear-gradient(#111111,#666e6c);;
+				box-shadow: 0px 0px 10px 3px #646464;
+				-webkit-box-shadow: 0px 0px 10px 3px #646464;
+				-moz-box-shadow: 0px 0px 10px 3px #646464;
+				z-index: 9999;
+			}
+
+			#footer p {
+				position: relative;
+				margin: 0;
+				padding: 30px 0 0 0;
+				text-align: center;	
+				font-size: 10px;
+				font-family: sans-serif;
+				color: #f8fc01;
+			}
+		
+	</style>
+	
+	<body style="margin:0;padding:0;">
+		<div id=root_area>
+			<div id=top_area>
+				<img class=top_img src="header.jpg">
+			</div>
+			<div id=middle_area>
+					<div id=middle_left_area>
+						<div id=middle_left_block>
+							<ul style="padding-left:5px;margin:10px 0">
+								<a href="#"><li>Home</li></a>
+								<a href="#"><li>Organising Committee</li></a>
+								<a href="#"><li>Calls</li></a>
+								<a href="#"><li>Final Paper submission</li></a>
+								<a href="#"><li>Symposiums</li></a>
+								<a href="#"><li>Speakers</li></a>
+								<a href="#"><li>Program</li></a>
+								<a href="#"><li>Registration</li></a>
+								<a href="#"><li>Travel Grants</li></a>
+								<a href="#"><li>Venue</li></a>
+								<a href="#"><li>History of SSCI</li></a>
+								<a href="#"><li>Contact Us</li></a>
+							</ul>
+						</div>
+					</div>
+					<div id=middle_center_area>
+						<div id=middle_center_block>
+				
+							<blockquote>
+							<h1 style="margin:0;color:#666666;padding:0 0 0 10px;letter-spacing:2px;font-size:32px"><a name="TOC-Welcome-to-PAKDD2014"></a>Welcome to PAKDD2014</h1>
+							<span style="color:#ff5755;font-size:28px">13-16 May, 2014, Tainan, Taiwan</span>
+							<span style="font-size:17px">The 18th Pacific-Asia Conference on Knowledge Discovery and Data Mining</span>
+							</blockquote>
+							<br>
+							<h2 style="text-align:left;width:520px;height:37px;font-size:30px;color:#935300;background:url('') no-repeat right bottom;border-bottom:1px solid #ccc;margin-top:0;margin-bottom:15px;line-height:38px;">News</h2>
+							<div>
+							<ul style="line-height:24px">
+							<li><strong>05/16/2014</strong>, <a href="https://www.flickr.com/photos/123825858@N02/sets/" target="_blank" rel="nofollow">Photos</a> taken during conference now available. If you have any problem about the photos, please feel free to reach us via <a href="mailto:pakdd2014@gmail.com">email</a>.</li>
+							<li><strong>05/14/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/best-paper-awards">Paper Awards</a> have been announced.</li>
+							<li><strong>05/13/2014</strong>, Due to unexpected reasons, we are sorry to inform that the <a href="https://sites.google.com/site/pakdd2014/cancel-tutorial">Tutorial 6</a> on May 16th will be canceled.</li>
+							<li><strong>05/09/2014</strong>, <span style="color:red">[IMPORTANT]</span>Please check special <a href="https://sites.google.com/site/pakdd2014/other-visa#five">visa information</a> for the nationals of India, Thailand, Vietnam, Philippines and Indonesia before you come to Taiwan.</li>
+							<li><strong>05/04/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/correction">CORRECTIONS of Information</a> has been announced.</li>
+							<li><strong>05/04/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/app">PAKDD 2014 APP</a> has been launched.</li>
+							<li><strong>04/24/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/excursion">Excursion</a> has been announced.</li>
+							<li><strong>04/21/2014</strong>, <a href="http://140.116.247.151/registration/LocalReg.php" rel="nofollow">Special Rates for Non-Author Domestic Scholars/Students</a> has been announced.</li>
+							<li>
+							</li>
+							<li><strong>04/12/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/recipients">Student travel award recipients</a> has been announced.</li>
+							<li><strong>04/06/2014</strong>, For your touring plan to Taiwan, We recommend all friends to check <a href="https://sites.google.com/site/pakdd2014/smart-tourism-taiwan">SmartTourismTaiwan</a>, developed by Advanced Research Institute,Institute for Information Industry</li>
+							<li><strong>03/03/2014</strong>, <span style="color:red">The <a href="https://sites.google.com/site/pakdd2014/china-visa">visa application</a> process for participants  who hold the passports of Mainland China takes quite a long time. Please file your application ASAP. The application deadline is extended to Mar. 10.</span></li>
+							<li><strong>02/27/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/techical-program">Preliminary Technical Program</a> has been launched.</li>
+							<li><strong>02/21/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/student-travel-award">Student Travel Award</a> has been launched.</li>
+							<li><strong>01/15/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/contest">PAKDD14 Contest</a> has been launched.</li>
+							<li><strong>01/15/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/registration">Registration system</a> is available now.</li>
+							<li><strong>01/10/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/keynotes">Keynote and Invited Speakers</a> have been announced.</li>
+							<li><strong>01/03/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/accommodation">Accommodation</a> have been announced.</li>
+							<li><strong>01/01/2014</strong>, <a href="https://sites.google.com/site/pakdd2014/accepted-papers">Accepted Papers</a> have been announced.</li>
+							<li><strong>12/25/2013</strong>, <a href="https://sites.google.com/site/pakdd2014/registration">Registration</a> have been announced.</li>
+							<li><strong>12/23/2013</strong>, <a href="https://sites.google.com/site/pakdd2014/camera-ready-submission-guidelines">Camera Ready Submission Guidelines</a> have been announced.</li>
+							<li><strong>12/22/2013</strong>, <a href="https://sites.google.com/site/pakdd2014/conference-venue">Conference Venue</a> have been announced.</li>
+							<li><strong>12/13/2013</strong>, <a href="https://sites.google.com/site/pakdd2014/tutorials">Accepted Tutorials</a> have been announced.</li>
+							<li><strong>10/15/2013</strong>, <a href="https://sites.google.com/site/pakdd2014/workshops">Accepted Workshops</a> have been announced.</li>
+							</ul>
+							</div>
+						</div>
+					</div>
+					<div id=middle_right_area>
+						<div id=middle_right_block>
+							<div class=middle_right_box>
+								<p>crow</p>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=middle_right_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg">flickr</a>
+							</div>
+							
+							<div class=middle_right_box>
+								<p>crow</p>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=middle_right_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg">flickr</a>
+							</div>
+							
+							<div class=middle_right_box>
+								<p>crow</p>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=middle_right_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg">flickr</a>
+							</div>
+							
+						</div>
+					</div>
+			</div>
+			<!--
+			<div id=bottom_area>
+				<div id=bottom_block>
+					<h3 class=bottom_h3>SPONSORS</h3>
+					<div>
+						<div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div id=bottom_block>
+					<h3 class=bottom_h3>ORGANIZERS</h3>
+					<div>
+						<div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							<div class=bottom_box>
+								<a href="https://www.flickr.com/photos/129614620@N07/36314549671/"><img class=bottom_img src="https://live.staticflickr.com/4392/36314549671_3dfb79639c_k.jpg"></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>	
+			</div>
+			-->
+			<div id="footer">
+				<p>&copy;&nbsp;&nbsp;All Rights Reserved</p>
+			</div>
+			
+		</div>
+	</body>
+</html>
