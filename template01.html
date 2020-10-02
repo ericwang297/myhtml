@@ -2,8 +2,7 @@
 <html>
 	<style>
 		
-		/* set whole a animaltion */
-		
+	
 		body{
 			font-family: Arial;
 		}
@@ -15,7 +14,7 @@
 			-webkit-margin-after: 0em;
 			-webkit-margin-start: 0px;
 			-webkit-margin-end: 0px;
-		 }
+		}
 		
 		#root_area{
 			min-width: 1200px;
@@ -63,7 +62,7 @@
 				#middle_left_area{
 					position: relative;
 					float: left;
-					width: 20%;
+					width: 25%;
 					text-align:center;
 					background-color:#ffffff;
 					z-index: 1;
@@ -84,7 +83,8 @@
 					}
 					
 					#middle_left_block li:hover{
-						background-color: #e79e15;
+						background-color: #000000;
+						
 						padding-bottom:10px;
 						padding-top: 10px;
 						padding-left: 18px;
@@ -94,7 +94,7 @@
 					}
 					
 					#middle_left_block li:active{
-						background-color: #000000;
+						background-color: #e79e15;
 						padding-bottom:10px;
 						padding-top: 10px;
 						padding-left: 18px;
@@ -104,6 +104,7 @@
 					}
 					
 					#middle_left_block li {
+						transition: background-color 0.4s;
 						list-style: none;
 						padding-bottom: 10px;
 						padding-top: 10px;
@@ -120,7 +121,7 @@
 				#middle_center_area{
 					position: relative;
 					float: left;
-					width: 60%;
+					width: 50%;
 					text-align:center;
 					background-color:#fdfdda;
 					box-shadow: 0px 0px 10px 3px #646464;
@@ -143,7 +144,7 @@
 					position: relative;
 					display: flow-root;
 					float: right;
-					width: 20%;
+					width: 25%;
 					text-align:center;
 					background-color:#FFFFFF;
 					z-index: 1;
@@ -152,8 +153,9 @@
 					#middle_right_block{
 						position: relative;
 						display: flow-root;
-						width: 90%;
+						width: 80%;
 						margin:0px auto;
+						margin-top: 40px;
 						text-align:left;
 						word-wrap:break-word;
 						word-break:break-all;
@@ -265,10 +267,36 @@
 		
 	</style>
 	
+	<script>
+		function f_calls_visible() {
+			document.getElementById("id_callsForPapers").style.display="block";
+			document.getElementById("id_callsForSpecialSessions").style.display="block";
+			document.getElementById("id_callsForTutorials").style.display="block";
+		}
+
+		function f_calls_invisible() {
+		  document.getElementById("id_callsForPapers").style.display="none";
+		  document.getElementById("id_callsForSpecialSessions").style.display="none";
+		  document.getElementById("id_callsForTutorials").style.display="none";
+		}
+		
+		function f_program_visible() {
+			document.getElementById("id_womenInComputationalIntelligence").style.display="block";
+			document.getElementById("id_studentActivitiess").style.display="block";
+			document.getElementById("id_publicLecture").style.display="block";
+		}
+
+		function f_program_invisible() {
+		  document.getElementById("id_womenInComputationalIntelligence").style.display="none";
+		  document.getElementById("id_studentActivitiess").style.display="none";
+		  document.getElementById("id_publicLecture").style.display="none";
+		}
+	</script>
+	
 	<body style="margin:0;padding:0;">
 		<div id=root_area>
 			<div id=top_area>
-				<img class=top_img src="ssci2021.jpg">
+				<img class=top_img src="header.jpg">
 			</div>
 			<div id=middle_area>
 					<div id=middle_left_area>
@@ -276,11 +304,21 @@
 							<ul style="padding-left:5px;margin:10px 0">
 								<a href="#"><li>Home</li></a>
 								<a href="#"><li>Organising Committee</li></a>
-								<a href="#"><li>Calls</li></a>
+								<div id="id_calls_div" onmouseover="f_calls_visible()" onmouseout="f_calls_invisible()">
+									<a href="#" id="id_calls"><li>Calls</li></a>
+									<a href="#" id="id_callsForPapers" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Calls for Papers</li></a>
+									<a href="#" id="id_callsForSpecialSessions" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Calls for Special Sessions</li></a>
+									<a href="#" id="id_callsForTutorials" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Calls for Tutorials</li></a>
+								</div>
 								<a href="#"><li>Final Paper submission</li></a>
 								<a href="#"><li>Symposiums</li></a>
 								<a href="#"><li>Speakers</li></a>
-								<a href="#"><li>Program</li></a>
+								<div id="id_program_div" onmouseover="f_program_visible()" onmouseout="f_program_invisible()">
+									<a href="#" id="id_program"><li>Calls</li></a>
+									<a href="#" id="id_womenInComputationalIntelligence" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Women in Computational Intelligence</li></a>
+									<a href="#" id="id_studentActivitiess" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Student Activitiess</li></a>
+									<a href="#" id="id_publicLecture" style="display: none"><li style="background-color: #444444; margin-left: -18px; padding-left: 18px">Public Lecture</li></a>
+								</div>
 								<a href="#"><li>Registration</li></a>
 								<a href="#"><li>Travel Grants</li></a>
 								<a href="#"><li>Venue</li></a>
